@@ -8,11 +8,17 @@ less
 curl
 wget
 vim
+nano
 perl-doc
 htop
 
 # Regular build tools for compiling common stuff
 build-essential
+cmake
+
+# Debugging tools
+gdb
+valgrind
 
 # Dependencies for nbconvert
 texlive-xetex

@@ -5,7 +5,7 @@ from nbclient import NotebookClient
 from pathlib import Path
 
 
-def run_notebook(notebook):
+def run_notebook(notebook, kernel_name="python3"):
     """
     Executes all cells in a Jupyter notebook and saves the output back to the same file.
 
@@ -30,7 +30,7 @@ def run_notebook(notebook):
     client = NotebookClient(
         notebook,
         timeout=600,
-        kernel_name="python3",
+        kernel_name=kernel_name,
         # This resource is used to set the working directory for the notebook's kernel.
         # It ensures that relative paths within the notebook resolve correctly.
         resources={"metadata": {"path": str(Path(notebook_path).parent)}},
@@ -57,7 +57,12 @@ def test_lec01_executed_1_notebook_execution():
     assert run_notebook("lec01_executed_1.ipynb")
 
 
+def test_cpp_kernel_notebook_execution():
+    assert run_notebook("cpp_kernel_test.ipynb", kernel_name="xcpp17")
+
+
 if __name__ == "__main__":
     test_hawthorne_notebook_execution()
     test_all_hub_basic_notebook_execution()
     test_lec01_executed_1_notebook_execution()
+    test_cpp_kernel_notebook_execution()

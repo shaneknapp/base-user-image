@@ -32,6 +32,9 @@ dependencies:
   # r2d installs jupyter-rsession-proxy, but in the base python env, not in the updated one
   - jupyter-rsession-proxy==2.5.1
 
+  # C++ kernel for Jupyter (registers xcpp11/xcpp14/xcpp17 kernels)
+  - xeus-cling==0.15.3
+
   # vscode
   - code-server==4.124.2
   - jupyter-vscode-proxy==0.7

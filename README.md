@@ -169,8 +169,3 @@ to the Google Artifact Registry and then creates a commit that updates the image
 for any hubs that use this image. That commit is then pushed to the 
 [Cal-ICOR Jupyterhub repo](https://github.com/cal-icor/cal-icor-hubs), and you will
 then need to manually create a pull requests to merge and deploy the new image.
-
-#### 4. **Temporarily disabled:** Test this PR on Binder Badge :arrow_right: [binder.yaml](https://github.com/cal-icor/shared-workflows/blob/main/.github/workflows/binder.yaml.disable)
-
-Since our images are typically large and take > 10m to build, this means that
-Binderhub builds will currently time out.

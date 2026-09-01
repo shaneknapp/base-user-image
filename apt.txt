@@ -20,7 +20,8 @@ cmake
 gdb
 valgrind
 
-# Dependencies for nbconvert
+# Dependencies for nbconvert and quarto rendering
+texlive-luatex
 texlive-xetex
 texlive-fonts-recommended
 texlive-plain-generic
